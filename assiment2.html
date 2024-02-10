@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ekaram-assiment2</title>
+  </head>
+  <body>
+    <script>
+      //1. Write a JavaScript function to calculate the sum of two numbers.
+      sum = (a, b) => {
+        return a + b;
+      };
+      let result = sum(12, 23);
+      document.writeln(`sum of a,b = ${result} </br></br>`);
+
+      //2. Write a JavaScript program to find the maximum number in an array.
+      function findMaxmumNumber(arr) {
+        if (arr.length == 0) {
+          return "array is empty";
+        }
+        let maximum = arr[0];
+        for (i of arr) {
+          if (i > maximum) {
+            maximum = i;
+          }
+        }
+        document.writeln(`maximum number in list;- ${maximum}</br></br>`);
+      }
+
+      let array = [1, 2, 3, 4, 5, 9, 8, 3];
+      findMaxmumNumber(array);
+
+      //3. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+      checkEvenNum = (arr) => {
+        let empty = [];
+        arr.forEach((num) => {
+          if (num % 2 == 0) {
+            empty.push(num);
+          }
+        });
+        document.write(`list of even number:- ${empty};</br></br>`);
+      };
+      let arrList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      checkEvenNum(arrList);
+
+      //6. How do you remove an element from an array at a specific index?
+      let num = [1, 2, 3, 4, 5, 6, 7];
+      //remove num=4
+      let halffirst = num.slice(0, 3);
+      let halflast = num.slice(4, 7);
+      document.writeln(
+        `remove element an a sepecifix index:- ${halffirst},${halflast};</br></br>`
+      );
+
+      //8. Wap to print all employees' data whose salary is greater than 20000 and dept is sales.
+      let employees = [
+        {
+          name: "karan",
+          department: "sales",
+          salary: 15000,
+          district: "hisar",
+        },
+        {
+          name: "manju",
+          department: "sales",
+          salary: 25000,
+          district: "jind",
+        },
+        {
+          name: "kiran",
+          department: "sales",
+          salary: 45000,
+          district: "gurugram",
+        },
+        {
+          name: "manish",
+          department: "sales",
+          salary: 16000,
+          district: "faridabad",
+        },
+        {
+          name: "lalit",
+          department: "sales",
+          salary: 21000,
+          district: "ambala",
+        },
+        {
+          name: "mukesh",
+          department: "sales",
+          salary: 20000,
+          district: "panckula",
+        },
+        {
+          name: "deepak",
+          department: "sales",
+          salary: 35000,
+          district: "mewat",
+        },
+      ];
+
+      employees
+        .filter((employee) => employee.salary > 20000)
+        .forEach((employee) => {
+          document.write(`${employee.name}</br>`);
+        });
+    </script>
+  </body>
+</html>
